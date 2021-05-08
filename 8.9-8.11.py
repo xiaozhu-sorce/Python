@@ -23,3 +23,23 @@ completed_models = []
 #使用副本，使得unprinted_designs不会被清空
 print_models(unprinted_designs[:],completed_models)
 show_completed_models(completed_models)
+
+#练习8-9,8-10
+def show_magicians(magician_b):
+    """显示魔术师"""
+    for magician in magician_b:
+        print(magician)
+
+def make_great(magician_a,magician_b):
+	"""了不起的魔术师"""
+	while magician_a:
+		mag = magician_a.pop()
+		mag = 'the great ' + mag
+		magician_b.append(mag)
+    
+m = ['魔术师1', '魔术师2', '魔术师3']
+n = []
+make_great(m[:],n)	
+show_magicians(m)
+show_magicians(n)
+	
