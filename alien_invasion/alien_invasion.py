@@ -115,7 +115,8 @@ class AlienInvasion:
 
 	def _create_fleet(self):
 		"""创建外星人群"""
-		#创建一个外星人并计算一行可以容纳多少个外星人
+		#创建一个外星
+		# 人并计算一行可以容纳多少个外星人
 		#外星人的间距为外星人宽度
 		alien = Alien(self)
 		alien_width,alien_height = alien.rect.size
@@ -223,11 +224,11 @@ class AlienInvasion:
 
 	def _ship_hit(self):
 		"""响应飞船被外星人撞到"""
+		#将ships—_left减1
+		self.stats.ships_left -= 1
+		self.sb.prep_ships()
 
 		if self.stats.ships_left > 0:	
-			#将ships—_left减1
-			self.stats.ships_left -= 1
-			self.sb.prep_ships()
 
 			#清空余下的外星人和子弹
 			self.aliens.empty()
